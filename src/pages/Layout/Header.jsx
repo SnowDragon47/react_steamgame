@@ -9,12 +9,13 @@ import Discord from "../../assets/img/discord.svg";
 import Twitch from "../../assets/img/Twitch.svg";
 import Medium from "../../assets/img/Medium.svg";
 import Youtube from "../../assets/img/Youtube.svg";
-import { setSelectionRange } from "@testing-library/user-event/dist/utils";
+import userAvatar from "../../assets/img/user_avatar.png";
+import LogOut1 from "../../assets/img/logout1.svg";
 
 
 const Header =() => {
     const[isBuger, setIsBuger] = useState(false);
-
+    const[isLogin, setLogin] = useState(false);
     const bugerClick = () =>{
         setIsBuger(!isBuger);
     }
@@ -78,10 +79,25 @@ const Header =() => {
                             </a>
                         </div>
                     </div>
-                    <button class="header__btn m-btn m-btn-red">
-                        <img src={steam} alt=""/>
-                        <span>Login <br/> with steam</span>
-                    </button>
+                    {!isLogin? (
+                        <Link to='../user/login'>
+                           
+                            <button class="header__btn m-btn m-btn-red" >
+                                <img src={steam} alt=""/>
+                                <span>Login <br/> with steam</span>
+                            </button>
+                        </Link>
+                    ): (
+                        <Link to='../user/logout'>
+                           
+                            <button class="header__btn m-btn m-btn-red" >
+                                <img src={userAvatar} className="avatar_img" />
+                                <span>IVANGAMMER</span>
+                                <img src={LogOut1}  style={{marginLeft:"10px", width:"20px"}}/>
+                            </button>
+                        </Link>
+                    )}
+                    
                     <button class="burger m-btn m-btn-red" onClick={bugerClick}>
                         <img src={burger} alt=""/>
                     </button>

@@ -7,6 +7,8 @@ import Support from './pages/Support.jsx';
 import Footer from "./pages/Layout/Footer.jsx";
 import Header from './pages/Layout/Header.jsx';
 import Rules from './pages/Rules.jsx';
+import Login from './pages/User/Login.jsx';
+
 function App() {
   return (
       <body className='m-page'>
@@ -18,6 +20,7 @@ function App() {
               <Route path='/howtostart' element = {<Howtostart/>} />
               <Route path='/support' element = {<Support/>} />
               <Route path='/rules' element = {<Rules/>} />
+              <Route path = '/user/login' element = {<Login/>}/>
             </Routes>
             <Footer/>
           </BrowserRouter>      

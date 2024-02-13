@@ -4,7 +4,7 @@ import Faq from '../components/Faq/Faq.jsx';
 const Howtostart = () =>{
     return(
         <div>
-            <main className="content">
+            <main className="content">  
                 <div class="main main2">
                     <div class="container">
                         <div class="main__content">

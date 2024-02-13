@@ -769,6 +769,14 @@ html.fixed-body {
     padding: 3.125em 0;
     z-index: 10
 }
+.avatar_img
+{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    vertical-align: middle; 
+    
+}
 
 .header__inner {
     display: -webkit-box;
@@ -1780,6 +1788,283 @@ html.fixed-body {
     margin-top: 1.25em
 }
 
+.login
+{
+    position: relative;
+    margin-top: -15%;
+    text-align: center;
+    z-index: 100;
+    
+}
+.login_bar2
+{
+    margin-top: -0.15em;
+    position: relative;
+    
+}
+.login_bar3
+{
+    position: relative;
+    
+}
+.login_container
+{
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.1);
+    text-align: center;
+    max-width: 1320px;
+    width: 100%;
+    margin: auto;
+    margin-top: -0.15em;
+    flex: auto;
+    flex-direction: column;
+    z-index: -1;
+    height: 1050px;
+}
+.login_info_card::before
+{
+    position: relative;
+    background-color: rgba(255, 255, 255);
+    opacity: 1;
+    z-index: 100;
+    height: 100px;
+    border-radius: 20px;
+    
+}
+.login_info_card
+{
+    z-index: 100;
+}
+.artist_card
+{
+    position: absolute;
+    margin-top: 5%;
+    margin-left: 15%;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.back_content
+{
+    position: relative;
+    background-color: #3B3B3B;
+    border-radius: 20px;
+    width: 330px;
+    height: 100px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-left: 30px;
+    padding: 30px;    
+}
+.wallet_btn_red
+{
+    top: -20px;
+    position: relative;
+    background-color: #CC402A;
+    border-radius: 20px;
+    width: 330px;
+    height: 80px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    margin-left: 30px;  
+    padding: 30px;
+}
+.login_form
+{
+    position: relative;
+    text-align: center;
+    background-color: #2B2B2B;
+    max-width: 1320px;
+    max-height: 642px;
+    margin: auto;
+    margin-top:-2.5%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.login_banner
+{
+    position: relative;
+    width: 50%;
+    aspect-ratio: 20 / 18;
+    /* margin-left: -14%; */
+    object-fit: none;
+    object-position: 55% bottom;
+}
+.font_white
+{
+    color: white;
+    text-align: left;
+}
+.login_content
+{
+    position: absolute;
+    display: flex;
+    text-align: left;
+    padding: 5%;
+    width: 50%;
+    margin-left: 50%;
+    flex-direction: row;
+    border-collapse:separate; 
+    border-spacing: 0 2em;
+}
+.wallet_btn
+{
+    color: white;
+    width: 100%;
+    min-height: 6vh;
+    background-color: #3B3B3B;
+    opacity: 100%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding-left: 10%;    
+    
+}
+.btn_between
+{
+    padding-left: 10%;
+}
+.login_user_list
+{
+    background-color: #343434;
+    position: relative;
+    max-width: 1320px;
+    margin: auto;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+.logined_user_list
+{   
+    position: relative;
+    max-width: 1320px;
+    margin: auto;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 65.8vh;
+    margin-top:-33%;
+}
+.user_table
+{
+    position: relative;
+    margin: 7%;
+    text-align: left;
+}
+.table_header
+{
+    position: absolute;
+    border-radius: 25px;
+    border: 1px solid #3B3B3B;
+    color: #7B7B7A;
+    height: 5vh;
+    width: 100%;
+    font-family:'Courier New', Courier, monospace;    
+    padding: 0.5em;
+}
+.login_between_bar
+{
+    position: absolute;
+    margin-top: 40px;
+}
+.ml-2
+{
+    margin-left: 1em;
+}
+.ml-4
+{
+    margin-left: 2em;
+}
+.ml-12
+{
+    margin-left: 10em;
+}
+.ml-20
+{
+    margin-left: 20em;
+}
+.ml-24
+{
+    margin-left: 25em;
+}
+.ml-8
+{
+    margin-left: 8em;
+}
+.table_body
+{
+    position: absolute;
+    color: #7B7B7A; 
+    /* height: 4vh; */
+    font-family: 'Work Sans';
+   
+    margin-top: 3.5em;
+    width: 100%;
+    /* margin-left: 2em; */
+}
+.user_member_btn
+{
+    position: relative;
+    color: white;
+    min-height: 6vh;
+    background-color: #3B3B3B;
+    opacity: 100%;
+    border-radius: 10px;
+    padding: 3px; 
+    border:none !important;   
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 10px;
+    
+}
+.ranking_number
+{
+    margin-top: 5px;
+  /* padding: -1px; */
+  position: absolute;
+  color: #858584;
+  margin-left: -19px;
+}
+.user_name
+{
+    margin-top: 10px;
+  /* padding: -1px; */
+    position: absolute;
+    color: whitesmoke;
+    margin-left: 10px;
+
+}
+.tier
+{
+    color: #00AC4F;
+    
+}
+.font_work_sans
+{
+    font-weight: bold;
+    font-family:'Work Sans' SemiBold;
+    font-size: 22px;
+    
+}
+
+.user_no_rectangul
+{
+    justify-content: end;   
+}
 @media screen and (max-width:992px) {
     .profile-main {
         min-height: 15.125em
@@ -1885,6 +2170,5 @@ html.fixed-body {
         grid-template-columns: repeat(2, calc(50% - .625em))
     }
 }
-
 
 /*# sourceMappingURL=../sourcemaps/style.min.css.map */
