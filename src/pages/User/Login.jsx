@@ -21,9 +21,9 @@ const Login  = () => {
             </main>  
             <div className="login">                
                 <img src={Loginbar1} alt="" className="login_bar1"/>
-                {isLogined? null: <img src={Loginbar2} alt="" className="login_bar2"/>}
-                {isLogined? <Logined/> : <NotLogined/>}
-                {/* <Logined/> */}
+                {/* {isLogined? null: <img src={Loginbar2} alt="" className="login_bar2"/>} */}
+                {/* {isLogined? <Logined/> : <NotLogined/>} */}
+                <Logined/>
                 {/* <NotLogined/> */}
                 <img src={Loginbar3} alt="" className="login_bar3"/>
             </div>

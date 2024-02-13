@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 import LoginBanner from '../../assets/img/login_banner.jpg';
 import MetaMaskImg from '../../assets/img/metamask.svg';
@@ -9,9 +9,16 @@ import ArtistAvatar from "../../assets/img/Artist Avatar.png";
 import LoginBetweenImg from '../../assets/img/loginbar_between.svg';
 import ArtistAvatar1 from "../../assets/img/Artist Avatar1.png";
 import ArtistAvatar2 from "../../assets/img/Artist Avatar2.png";
+// import { useState } from 'react';
 
 const NotLogined = () =>
 {
+
+    const [islogin, setLogin] = useState(false);
+
+    const toogleLogin = () => {
+            setLogin(!islogin)
+    }
     return (
         <div>
             <div className="login_form">
@@ -25,7 +32,7 @@ const NotLogined = () =>
                             <text className="font_white font_work_sans">Choose a wallet you want to connect. <br/>There are several wallet providers.</text>
                         </tr>
                         <tr>
-                            <button className="wallet_btn"><img src={MetaMaskImg} width={30}/><p className="btn_between font_work_sans">Metamask</p></button>
+                            <button className="wallet_btn" onClick={toogleLogin}><img src={MetaMaskImg} width={30}/><p className="btn_between font_work_sans">Metamask</p></button>
                         
                         </tr>
                         <tr>
@@ -59,7 +66,7 @@ const NotLogined = () =>
                         </td>
                         <td>
                         <text className="text18  ml-8">
-                                Volumn
+                                Points earned
                             </text>
                         </td>                            
                     </thead>

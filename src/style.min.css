@@ -1848,8 +1848,9 @@ html.fixed-body {
 .back_content
 {
     position: relative;
-    background-color: #3B3B3B;
-    border-radius: 20px;
+    background-image: url("assets/img/Artist Card.svg");
+    /* opacity: 5% !important; */
+    /* border-radius: 20px; */
     width: 330px;
     height: 100px;
     align-items: center;
@@ -1859,20 +1860,130 @@ html.fixed-body {
     margin-left: 30px;
     padding: 30px;    
 }
+.back_content_number
+{
+    position: relative;
+    background-image: url("assets/img/Artist Card.svg");
+    /* opacity: 5% !important; */
+    /* border-radius: 20px; */
+    width: 330px;
+    height: 100px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-left: 30px;
+    padding: 30px;    
+}
+.back_content_address
+{
+    position: relative;
+    background-image: url("assets/img/Artist Card.svg");
+    /* opacity: 5% !important; */
+    /* border-radius: 20px; */
+    width: 330px;
+    height: 100px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-left: 30px;
+    padding: 30px;    
+}
+.back_content_claim
+{
+    position: relative;
+    background-image: url("assets/img/Artist Card.svg");
+    /* opacity: 5% !important; */
+    /* border-radius: 20px; */
+    width: 330px;
+    height: 100px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-left: 30px;
+    padding: 30px;
+}
+.back_content_tier
+{
+    position: relative;
+    background-image: url("assets/img/Artist Card.svg");
+    /* opacity: 5% !important; */
+    /* border-radius: 20px; */
+    width: 330px;
+    height: 100px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-left: 30px;
+    padding: 30px;
+}
 .wallet_btn_red
 {
     top: -20px;
     position: relative;
     background-color: #CC402A;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     width: 330px;
     height: 80px;
     align-items: center;
+    text-align: center;
     display: flex;
     flex-direction: row;
     margin-top: 40px;
     margin-left: 30px;  
-    padding: 30px;
+    padding-left: 30%;
+}
+.wallet_btn_red_claim
+{
+    top: -20px;
+    position: relative;
+    background-color: #CC402A;
+    /* border-radius: 20px; */
+    width: 330px;
+    height: 80px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    margin-left: 30px;  
+    padding-left: 30%;
+}
+.wallet_btn_red_upgrade
+{
+    top: -20px;
+    position: relative;
+    background-color: #CC402A;
+    /* border-radius: 20px; */
+    width: 330px;
+    height: 80px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    margin-left: 30px;  
+    padding-left: 30%;
+}
+.wallet_number
+{
+    margin-top:10px;
+    background-color: #cc402a;
+    color: white;
+    width: 100%;
+    height: 30px;
+    margin-left: 30px;
+}
+.wallet_address
+{
+    margin-top: 5px;
+    color: white;
+    width: 100%;
+    height: 20px;
+    margin-left: 10px;
 }
 .login_form
 {
@@ -1946,7 +2057,7 @@ html.fixed-body {
 }
 .logined_user_list
 {   
-    position: relative;
+    position: absolute;
     max-width: 1320px;
     margin: auto;
     flex-grow: 1;
@@ -1954,7 +2065,8 @@ html.fixed-body {
     flex-direction: column;
     width: 100%;
     height: 65.8vh;
-    margin-top:-33%;
+    top:40%;
+    margin-left: 15.3%;
 }
 .user_table
 {
@@ -1977,6 +2089,7 @@ html.fixed-body {
 {
     position: absolute;
     margin-top: 40px;
+    width: 100%;
 }
 .ml-2
 {
@@ -2038,6 +2151,7 @@ html.fixed-body {
   position: absolute;
   color: #858584;
   margin-left: -19px;
+  font-family: "Roboto" Condensed Bold;
 }
 .user_name
 {
@@ -2064,6 +2178,78 @@ html.fixed-body {
 .user_no_rectangul
 {
     justify-content: end;   
+}
+@media screen and (max-width:1520px) {
+
+    .login_between_bar
+    {
+        margin-left: -7.5em;
+    }
+    .login_between_bar
+    {
+        margin-left: 0.5em;
+    }
+    .logined_user_list
+    {
+        width: 95%;
+        margin-left: 4.8em;
+    }
+}
+@media screen and (max-width:1440px) {
+    .login_bar1{
+        width:96%;
+    }
+    .login_bar2
+    {
+        width: 98%;
+    }
+    .login_container
+    {
+        margin-top: -2.5px;
+        width: 97%;
+        height: 200vh;
+    }
+    .logined_user_list
+    {
+        margin-top: -30vh;
+        margin-left: 5em;
+        width: 96%;            
+    }
+    .login_bar3
+    {
+        width: 98%;
+    }
+
+}
+@media screen and (max-width:1200px) {
+    .login_bar1
+    {
+        width: 97.1%;
+    }
+    .login_bar2
+    {
+        width: 97.1%;
+    }
+    .login_container
+    {
+        margin-top: -1.8px;
+        height: 200vh;
+        width: 85.5em;
+    }
+    .login_info_card
+    {
+        margin-left: -4em;
+    }
+    .logined_user_list
+    {
+        margin-top: -25vh;
+        margin-left: 2em;
+        width: 100%;            
+    }
+    .login_bar3
+    {
+        width: 85.5em;
+    }
 }
 @media screen and (max-width:992px) {
     .profile-main {
@@ -2127,9 +2313,119 @@ html.fixed-body {
     .shop-card__btn {
         margin-top: .625em
     }
-}
 
+}
 @media screen and (max-width:576px) {
+    .login_bar1{
+        width:23em;
+    }
+    .login_bar2
+    {
+        width: 23em;
+    }
+    .login_container
+    {
+        margin-top: -3px;
+        width: 23em;
+        height: 200vh;
+    }
+    .login_info_card
+    {
+        margin-top: 1em;
+        margin-left: 2em;
+    }
+    .back_content_number
+    {
+        position: absolute;
+        max-width: 20em;
+        margin-top: 13em;
+        margin-left: -17.5em;
+    }
+    .back_content_address
+    {
+        position: absolute;
+        max-width: 20em;
+        margin-top: 21em;
+        margin-left: -17.5em;
+    }
+    .back_content_claim
+    {
+        position: absolute;
+        margin-top: 29em;
+        width: 9.5em;
+        margin-left: -17.5em;
+    }
+   
+    .back_content_tier
+    {
+        position: absolute;
+        width: 9.5em;
+        margin-top: 29em;  
+        margin-left: -7em;      
+    }
+     .wallet_btn_red_claim
+    {
+        position: absolute;
+        top:88vh;
+        max-width: 9.5em;
+        padding: 1.7em;
+        margin-left: -17.5em;
+    }
+    .wallet_btn_red_upgrade
+    {
+        position: absolute;
+        top: 88vh;
+        padding: 1em;
+        max-width: 9.5em;
+        margin-left: -7em;
+    }
+    .login_between_bar
+    {
+        margin-top: 0.5vh;
+        margin-left: 0.5em;
+        width: 96%;
+    }
+    .logined_user_list
+    {
+        margin-top: 30vh;
+        margin-left: 0.5em;
+        width: 96%;            
+    }
+    .tier
+    {
+        visibility: hidden;
+    }
+    .server
+    {
+        visibility: hidden;
+    }
+    .point
+    {
+        margin-top: -1vh;
+        position: absolute;
+        visibility: show;
+        right: 10%;
+    }
+    .rank
+    {
+        width: 20px;
+        margin-left: 5px;
+    }
+    .user_avatar
+    {
+        width:20px;
+    }
+    .user_name
+    {
+        margin-top: 5px;
+        font-size: 12px;
+    }
+    .login_bar3
+    {
+        position: relative;
+        top: -4.5px;
+        width: 23.2em;
+    }
     .profile-main:before {
         display: none
     }

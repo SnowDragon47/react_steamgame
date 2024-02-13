@@ -20,17 +20,25 @@ const Logined = () =>
                                 <img src={LoginInfoCard} className="login_info_card"/>
                             </td>
                             <td>
-                                <tr className="back_content">
+                                <tr className="back_content_number">
                                     <td>
                                         <img src={ArtistAvatar} width={40}/>
                                     </td>
                                     <td>
-                                        <text className="font_work_sans ml-2">
-                                            Steam Name
-                                        </text>
+                                        <tr>
+                                            <text className="font_work_sans ml-2">
+                                                Wallet
+                                            </text>
+                                        </tr>
+                                        <tr>
+                                            <button className="wallet_number">
+                                                0X....4888
+                                             </button>   
+                                        </tr>
+                                        
                                     </td>
                                 </tr>
-                                <tr className="back_content">
+                                <tr className="back_content_claim">
                                     <td>
                                         <tr>
                                             <text className="font_work_sans">
@@ -51,7 +59,35 @@ const Logined = () =>
                                         </tr>
                                     </td>
                                 </tr>
-                                <tr className="back_content">
+                                <tr className="wallet_btn_red_claim">
+                                    <td>
+                                        <text className="font_work_sans ml-2">
+                                            CLAIM
+                                        </text>
+                                    </td>
+                                </tr>
+                                
+                            </td>
+                            <td>
+                                <tr className="back_content_address">
+                                    <td>
+                                        <img src={ArtistAvatar1} width={40}/>
+                                    </td>
+                                    <td>
+                                        <tr>
+                                            <text className="font_work_sans ml-2">
+                                                Wallet Address
+                                            </text>
+                                        </tr>
+                                        <tr>
+                                            <button className="wallet_address">
+                                            75651198042333132
+                                            </button>
+                                        </tr>
+                                        
+                                    </td>
+                                </tr>
+                                <tr className="back_content_tier">
                                     <td>
                                         <tr>
                                             <text className="font_work_sans">
@@ -73,29 +109,10 @@ const Logined = () =>
                                     </td>
                                 </tr>
                                 
-                            </td>
-                            <td>
-                                <tr className="back_content">
-                                    <td>
-                                        <img src={ArtistAvatar1} width={40}/>
-                                    </td>
+                                <tr className="wallet_btn_red_upgrade">
                                     <td>
                                         <text className="font_work_sans ml-2">
-                                            Wallet Address
-                                        </text>
-                                    </td>
-                                </tr>
-                                <tr className="wallet_btn_red">
-                                    <td>
-                                        <text className="font_work_sans ml-2">
-                                            Claim
-                                        </text>
-                                    </td>
-                                </tr>
-                                <tr className="wallet_btn_red">
-                                    <td>
-                                        <text className="font_work_sans ml-2">
-                                            Upgrade
+                                            UPGRADE
                                         </text>
                                     </td>
                                 </tr>
@@ -109,36 +126,36 @@ const Logined = () =>
                 <table className="user_table">
                     <thead className="table_header">
                         <td>
-                            <text className="text18 ml-4">#</text>
+                            <text className="ml-4 rank">#</text>
                         </td>                  
                         <td>    
-                        <text className="text18  ml-4">Player</text>
+                        <text className="ml-4 user_avatar">Player</text>
                         </td>
                         <td>
-                        <text className="text18  ml-20">
+                        <text className="ml-20 tier">
                                 Tier
                             </text>
                         </td>
                         <td>
-                        <text className="text18  ml-8">
+                        <text className="ml-8 server">
                                 Server
                             </text>
                         </td>
                         <td>
-                        <text className="text18  ml-8">
-                                Volumn
+                        <text className="ml-8 point">
+                                Points earned
                             </text>
                         </td>                            
                     </thead>
                     <tbody className="table_body">
                             <tr className="user_member_btn">
-                                <td className="text18 ml-4">
+                                <td className="text18 ml-4 rank">
                                         <img src={RankingNumberImg}/>
                                         <text className="ranking_number">1</text>
                                 </td>
                                 <td className="text22 ml-2">
                                     <div className="user_no_rectangul">
-                                    <img src={ArtistAvatar} width={40}/>
+                                    <img src={ArtistAvatar} width={40} className="user_avatar"/>
                                     <text className="userInfo font_work_sans user_name">Jaydon Ekstrom Bothman</text>
                                     </div>
                                 </td>
@@ -146,21 +163,21 @@ const Logined = () =>
                                     <text className="userInfo tier">1</text>
                                 </td>
                                 <td className="ml-12">
-                                    <text className="userInfo">Scrapfrontier 1</text>
+                                    <text className="userInfo server">Scrapfrontier 1</text>
                                 </td>
                                 <td className="ml-8">
-                                    <text className="userInfo">8000</text>
+                                    <text className="userInfo point">18000</text>
                                 </td>
                             </tr>
                             <tr className="user_member_btn">
-                                <td className="text18 ml-4">
+                                <td className="text18 ml-4 rank">
                                     
                                         <img src={RankingNumberImg}/>
                                         <text className="ranking_number">2</text>
                                 </td>
                                 <td className="text22 ml-2">
                                     <div className="user_no_rectangul">
-                                    <img src={ArtistAvatar1} width={40}/>
+                                    <img src={ArtistAvatar1} width={40} className="user_avatar"/>
                                     <text className="userInfo font_work_sans user_name">Ruben Carder</text>
                                     </div>
                                 </td>
@@ -168,21 +185,20 @@ const Logined = () =>
                                     <text className="userInfo tier">1</text>
                                 </td>
                                 <td className="ml-12">
-                                    <text className="userInfo">Scrapfrontier 1</text>
+                                    <text className="userInfo server">Scrapfrontier 1</text>
                                 </td>
                                 <td className="ml-8">
-                                    <text className="userInfo">8000</text>
+                                    <text className="userInfo point">15265</text>
                                 </td>
                             </tr>
                             <tr className="user_member_btn">
-                                <td className="text18 ml-4">
-                                    
+                                <td className="text18 ml-4 rank">
                                         <img src={RankingNumberImg}/>
                                         <text className="ranking_number">3</text>
                                 </td>
                                 <td className="text22 ml-2">
                                     <div className="user_no_rectangul">
-                                    <img src={ArtistAvatar2} width={40}/>
+                                    <img src={ArtistAvatar2} width={40} className="user_avatar"/>
                                     <text className="userInfo font_work_sans user_name">Alfredo Septimus</text>
                                     </div>
                                 </td>
@@ -190,10 +206,10 @@ const Logined = () =>
                                     <text className="userInfo tier">1</text>
                                 </td>
                                 <td className="ml-12">
-                                    <text className="userInfo">Scrapfrontier 1</text>
+                                    <text className="userInfo server">Scrapfrontier 1</text>
                                 </td>
                                 <td className="ml-8">
-                                    <text className="userInfo">8000</text>
+                                    <text className="userInfo point">15120</text>
                                 </td>
                             </tr>
                         
@@ -204,4 +220,4 @@ const Logined = () =>
  
     );
 }
-export default Logined
+export default Logined  
