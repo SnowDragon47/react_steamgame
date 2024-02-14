@@ -1,5 +1,4 @@
 import React from "react";
-import { Table, Col, Row, Container} from "react-bootstrap";
 import LoginInfoCard from "../../assets/img/Info Card.png";
 import ArtistAvatar from "../../assets/img/Artist Avatar.png";
 import ArtistAvatar1 from "../../assets/img/Artist Avatar1.png";
