@@ -12,12 +12,15 @@ import Youtube from "../../assets/img/Youtube.svg";
 import axios from "axios";
 import userAvatar from "../../assets/img/user_avatar.png";
 import LogOut1 from "../../assets/img/logout1.svg";
+import { useNavigate } from "react-router-dom";
 
+const Header = () => {
+    const [isBuger, setIsBuger] = useState(false);
+    const [isLogin, setLogin] = useState(false);
 
-const Header =() => {
-    const[isBuger, setIsBuger] = useState(false);
-    const[isLogin, setLogin] = useState(false);
-    const bugerClick = () =>{
+    const navigate = useNavigate();
+
+    const bugerClick = () => {
 
         setIsBuger(!isBuger);
     }
@@ -30,6 +33,9 @@ const Header =() => {
         })
             .then(function (response) {
                 console.log(response);
+                setLogin(true)
+                navigate('../user/login')
+
             })
             .catch(function (error) {
                 console.log(error);
@@ -96,21 +102,18 @@ const Header =() => {
                             </a>
                         </div>
                     </div>
-                    {!isLogin? (
-                        <Link to='../user/login'>
-                           
-                            <button class="header__btn m-btn m-btn-red" >
-                                <img src={steam} alt=""/>
-                                <span>Login <br/> with steam</span>
-                            </button>
-                        </Link>
-                    ): (
+                    {!isLogin ? (
+                        <button class="header__btn m-btn m-btn-red" onClick={handleLoginSteam}>
+                            <img src={steam} alt="" />
+                            <span>Login <br /> with steam</span>
+                        </button>
+                    ) : (
                         <Link to='../user/logout'>
-                           
+
                             <button class="header__btn m-btn m-btn-red" >
                                 <img src={userAvatar} className="avatar_img" />
                                 <span>IVANGAMMER</span>
-                                <img src={LogOut1}  style={{marginLeft:"10px", width:"20px"}}/>
+                                <img src={LogOut1} style={{ marginLeft: "10px", width: "20px" }} />
                             </button>
                         </Link>
                     )}
