@@ -139,32 +139,27 @@ const Logined = () =>
                 <div className="logined_user_list">
                     <img src={LoginBetweenImg} className="login_between_bar"/>
                     <table className="user_table">
-                        <thead className="table_header">
-                            <tr style={{width:"100%"}}>
-                            <td>
-                                <text className="rank">#</text>
-                            </td>                  
-                            <td>    
-                            <text className="ml-4 user_avatar">Player</text>
-                            </td>
-                            <td>
-                            <text className="ml-20 tier">
-                                    Tier
-                                </text>
-                            </td>
-                            <td>
-                            <text className="ml-8 server">
-                                    Server
-                                </text>
-                            </td>
-                            <td>
-                            <text className="ml-8 point">
-                                    Points earned
-                                </text>
-                            </td>
-                            </tr>             
-                        </thead>
                         <tbody className="table_body">
+                            <tr className="table_header">
+                                <td className="ml-4 rank text18">
+                                    <text>#</text>
+                                </td>                  
+                                <td className="ml-2">    
+                                    <text>Player</text>
+                                </td>
+                                <td className="ml-24 tier">
+                                    <text>Tier</text>
+                                </td>
+                                <td className="ml-12 server">
+                                <text>
+                                        Server
+                                    </text>
+                                </td>
+                                <td className="ml-8 point">
+                                    <text >Points earned
+                                    </text>
+                                </td>
+                            </tr>
                             <tr className="user_member_btn">
                                 <td className="ml-4 rank text18">
                                         <img src={RankingNumberImg}/>
@@ -231,8 +226,8 @@ const Logined = () =>
                             </tr>
                         </tbody>
                     </table>
-                    <img src={Loginbar3} alt="" className="login_bar3"/>
                 </div>
+                <img src={Loginbar3} alt="" className="login_bar3"/>
 
             </div>
         </div> 

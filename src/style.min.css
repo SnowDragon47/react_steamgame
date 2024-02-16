@@ -1794,7 +1794,7 @@ html.fixed-body {
     position: relative;
     margin-top: -15%;
     text-align: center;
-    z-index: 100;
+    z-index: 2;
 }
 .login_bar2
 {
@@ -1814,7 +1814,7 @@ html.fixed-body {
     flex: auto;
     flex-direction: column;
     z-index: -1;
-    height: 1050px;
+    /* height: 1050px; */
 }
 .login_info_card::before
 {
@@ -1826,15 +1826,18 @@ html.fixed-body {
     border-radius: 20px;
     
 }
+.login_info_card
+{
+    margin: 0%;
+}
 .artist_card
 {
     position: relative;
-    /* margin-top: 5%; */
-    margin-left: 15%;
+    left: 10%;
     top: 0px;
     display: flex;
     flex-direction: column;
-    padding-top: 3%;
+    padding: 5%;
     
 }
 .back_content
@@ -1856,6 +1859,7 @@ html.fixed-body {
 {
     position: relative;
     background-image: url("assets/img/Artist Card.svg");
+    background-repeat: no-repeat;
     /* background-size:50%; */
     /* background-repeat: none; */
     
@@ -1874,6 +1878,7 @@ html.fixed-body {
 {
     position: relative;
     background-image: url("assets/img/Artist Card.svg");
+    background-repeat: no-repeat;
     /* opacity: 5% !important; */
     /* border-radius: 20px; */
     width: 330px;
@@ -1889,6 +1894,7 @@ html.fixed-body {
 {
     position: relative;
     background-image: url("assets/img/Artist Card.svg");
+    background-repeat: no-repeat;
     /* opacity: 5% !important; */
     /* border-radius: 20px; */
     width: 330px;
@@ -1904,6 +1910,7 @@ html.fixed-body {
 {
     position: relative;
     background-image: url("assets/img/Artist Card.svg");
+    background-repeat: no-repeat;
     /* opacity: 5% !important; */
     /* border-radius: 20px; */
     width: 330px;
@@ -2059,8 +2066,9 @@ html.fixed-body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    top: -70vh;
-    /* height: 65.8vh; */
+    background-color: rgba(255, 255, 255, 0.1);
+    /* top: -70vh; */
+    height: 100vh;
     /* top:40%; */
     /* margin-left: 15.3%; */
 }
@@ -2072,7 +2080,7 @@ html.fixed-body {
 }
 .table_header
 {
-    position: absolute;
+    position: relative;
     border-radius: 25px;
     border: 2px solid #3B3B3B;
     color: #7B7B7A;
@@ -2080,8 +2088,9 @@ html.fixed-body {
     display: flex;
     flex-direction: row;
     width: 100%;
-    font-family:'Courier New', Courier, monospace;    
-    padding: 0.5em;
+    font-family:'Courier New', Courier, monospace; 
+    align-items: center;   
+    padding: 1em;
 }
 .login_between_bar
 {
@@ -2115,7 +2124,7 @@ html.fixed-body {
 }
 .table_body
 {
-    position: absolute;
+    position: relative;
     color: #7B7B7A; 
     /* height: 4vh; */
     font-family: 'Work Sans';
@@ -2184,49 +2193,10 @@ html.fixed-body {
 
 .login_bar3
 {
-    margin-top: 49.7vh;
     max-width: 1320px;
 }
-@media screen and (max-width:1560px) {
-    /* .login_bar1
-    {
-        max-width: 82%;
-        width: 82%;
-    }
-    .login_container
-    {
-        max-width: 82%;
-        width: 82%;
-    } */
-
-    /* .login_bar1{
-        width:98%;
-    }
-    .login_between_bar
-    {
-        margin-left: -7.5em;
-    }
-    .login_between_bar
-    {
-        margin-left: 0.5em;
-    }
-    .logined_user_list
-    {
-        width: 95%;
-        margin-left: 4.8em;
-    } */
-}
 @media screen and (max-width:1440px) {
-     .login_bar1
-    {
-        max-width: 1296px;
-        width: 1296px;
-    }
-    .login_container
-    {
-        max-width: 1296px;
-        width: 1296px;
-    }
+    
     .back_content_number
     {
         width: 82%;
@@ -2255,60 +2225,9 @@ html.fixed-body {
         max-width: 82%;
         margin-left: -3%;
     }
-    .login_bar3
-    {
-        max-width: 98.2%;
-    width: 98.2%;
-    margin-top: 49.7vh;
-        margin-left:1%
-    }
-    
-    /* .login_bar1{
-        width:96%;
-    }
-    .login_bar2
-    {
-        width: 98%;
-    }
-    .login_container
-    {
-        margin-top: -2.5px;
-        width: 97%;
-        height: 200vh;
-    }
-    .logined_user_list
-    {
-        margin-top: -30vh;
-        margin-left: 5em;
-        width: 96%;            
-    }
-    .login_bar3
-    {
-        width: 98%;
-    } */
-
-}
-@media screen and (max-width:1250px)
-{
-    .login_bar3
-    {
-        max-width:100%;
-        width: 100%;
-        margin-top: 51vh;
-        margin-left: 0%;
-    }
 }
 @media screen and (max-width:1080px) {
-    .login_bar1
-    {
-        max-width: 972px;
-        width: 972px;
-    }
-    .login_container
-    {
-        max-width: 972px;
-        width: 972px;
-    }
+   
     .back_content_number
     {
         width: 70%;
@@ -2340,195 +2259,104 @@ html.fixed-body {
         margin-left: -15%;
         padding-left: 20%;
     }
-    .login_bar3
-    {
-        max-width:93%;
-        width: 93%;
-        margin-top: 53.6vh;
-        margin-left: 3.6%;
-    }
-    /* .login_bar1
-    {
-        width: 97.1%;
-    }
-    .login_bar2
-    {
-        width: 97.1%;
-    }
-    .login_container
-    {
-        margin-top: -1.8px;
-        height: 200vh;
-        width: 85.5em;
-    }
-    .login_info_card
-    {
-        margin-left: -4em;
-    }
-    .logined_user_list
-    {
-        margin-top: -25vh;
-        margin-left: 2em;
-        width: 100%;            
-    }
-    .login_bar3
-    {
-        width: 85.5em;
-    } */
-}
-@media screen and (max-width:992px) {
-    .login_bar3
-    {
-        margin-top: 57.2vh;
-        width:50em;
-        max-width: 50em;
-        margin-left: -0.5em;
-    }
-    /* .profile-main {
-        min-height: 15.125em
-    }
-    .profile__inner {
-        margin-top: -3.625em
-    }
-    .profile__inner:after,
-    .profile__inner:before {
-        height: 4.5em
-    }
-    .profile__inner:before {
-        background-image: url("assets/img/profile-bg3.svg");
-    }
-    .profile__inner:after {
-        -webkit-transform: translateY(-.25px);
-        -ms-transform: translateY(-.25px);
-        transform: translateY(-.25px);
-        background-image: url("assets/img/profile-bg4.svg");
-    }
-    .profile__top {
-        padding: 1.25em 1.25em 1.875em
-    }
-    .profile__bottom {
-        padding: 1.875em 1.25em 1.25em
-    }
-    .user-info {
-        margin-top: .625em;
-        grid-template-columns: 10em calc(100% - 11.25em);
-        padding-top: 2.625em;
-        position: relative
-    }
-    .user-info__top {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%
-    }
-    .user-info__top .text46 {
-        font-size: 2em
-    }
-    .user-info__img img {
-        border-radius: .625em
-    }
-    .user-info__items {
-        margin-top: 0;
-        gap: 1.25em
-    }
-    .user-info__balance {
-        margin-top: 1.25em
-    }
-    .shop {
-        margin-top: .625em;
-        grid-template-columns: repeat(4, calc(25% - 3.75em / 4));
-        gap: 1.25em
-    }
-    .shop-card__img {
-        border-radius: .625em
-    }
-    .shop-card__btn {
-        margin-top: .625em
-    } */
-
 }
 @media screen and (max-width:576px) {
     .login_bar1{
-        width:23.5em;
-        max-width: 23.5em;
+        width:90%;
+        max-width: 90%;
     }
     .login_bar2
     {
-        width: 23em;
+        width: 290%;
     }
     .login_container
     {
-        margin-top: -3px;
-        width: 23.5em;
-        max-width: 23.5em;
-        height: 200vh;
+        
+        width: 90%;
+        max-width: 90%;
+        height: 100vh;
         z-index: 0;
+    }
+    .artist_card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: 5%;
     }
     .login_info_card
     {
-        margin-top: 1em;
-        margin-left: 1em;
+        margin: 10%;
+        width: 70%;
     }
     .back_content_number
     {
         position: absolute;
-        max-width: 20em;
-        width: 20em;
-        margin-top: 12em;
-        margin-left: -18em;
+        max-width: 110;
+        width: 80%;
+        margin: 10%;
+        left: -10%;
+        margin-top: 18vh;
     }
     .back_content_address
     {
         position: absolute;
-        max-width: 20em;
-        width: 20em;
-        margin-top: 18.5em;
-        margin-left: -18em;
+        max-width: 110;
+        width: 80%;
+        margin: 10%;
+        left: -10%;
+        margin-top: 30vh;
     }
     .back_content_claim
     {
         position: absolute;
-        margin-top: 25em;
-        width: 9.5em;
-        max-width: 9.5em;
-        max-width: 10em;
-        margin-left: -18em;
+        max-width: 110;
+        width: 38%;
+        margin: 10%;
+        left: -10%;
+        margin-top: 42vh;
     }
    
     .back_content_tier
     {
         position: absolute;
-        width: 9.5em;
-        margin-top: 25em;  
-        margin-left: -7.5em;      
+        max-width: 110;
+        width: 38%;
+        margin: 10%;
+        left: 32%;
+        margin-top: 42vh; 
     }
      .wallet_btn_red_claim
     {
         position: absolute;
-        top:71vh;
-        max-width: 9.5em;
-        padding: 2em;
-        margin-left: -18em;
+        max-width: 110;
+        width: 38%;
+        margin: 10%;
+        left: -10%;
+        margin-top: 78vh;
+        padding: 5%;
+        padding-left: 10%;
     }
     .wallet_btn_red_upgrade
     {
         position: absolute;
-        top: 71vh;
-        padding: 2em;
-        max-width: 9.5em;
-        margin-left: -7.5em;
+        max-width: 110;
+        width: 38%;
+        margin: 10%;
+        left:32%;
+        margin-top: 78vh;
+        padding: 5%;
     }
     .login_between_bar
     {
-        margin-top: -0.5vh;
+        margin-top: -6vh;
         margin-left: 0.5em;
         width: 96%;
     }
     .logined_user_list
     {
-        margin-top: -42vh;
-        margin-left: 0.5em;
-        width: 96%;            
+        /* margin-top: -42vh; */
+        width: 90%;
+        max-width: 90%;       
     }
     .tier
     {
@@ -2561,10 +2389,11 @@ html.fixed-body {
     }
     .login_bar3
     {
-        margin-top: 106vh;
-        width:23.5em;
-        max-width: 23.5em;
-        margin-left: -0em;
+        position: absolute;
+        width:90%;
+        max-width: 90%;
+        align-items: center;
+        justify-items: center;
     }
     .profile-main:before {
         display: none
