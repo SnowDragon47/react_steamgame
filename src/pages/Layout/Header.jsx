@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/img/logo.svg";
 import close from "../../assets/img/close.svg";
@@ -20,6 +20,12 @@ const Header = () => {
 
     const navigate = useNavigate();
 
+    useEffect(() => {
+        const steam_id = localStorage.getItem('steam_id');
+        if (steam_id)
+            setLogin(true)
+    }, [])
+
     const bugerClick = () => {
 
         setIsBuger(!isBuger);
@@ -27,19 +33,17 @@ const Header = () => {
 
     const handleLoginSteam = () => {
         console.log('dddddddddd', process.env.REACT_APP_SERVER_URL)
-        axios.post(`${process.env.REACT_APP_SERVER_URL}auth/loginbysteam`, {
-            firstName: 'Fred',
-            lastName: 'Flintstone'
-        })
-            .then(function (response) {
-                console.log(response);
-                setLogin(true)
-                navigate('../user/login')
+        window.location.href=`${process.env.REACT_APP_SERVER_URL}auth/steam`
+        // axios.get(`${process.env.REACT_APP_SERVER_URL}auth/steam`)
+        //     .then(function (response) {
+        //         console.log(response);
+        //         setLogin(true)
+        //         // navigate('../user/login')
 
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
+        //     })
+        //     .catch(function (error) {
+        //         console.log(error);
+        //     });
     }
 
     return (
