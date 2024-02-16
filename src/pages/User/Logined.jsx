@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import LoginImg from '../../assets/img/login.jpg';
 import Loginbar1 from '../../assets/img/loginbar1.svg';
@@ -14,6 +14,11 @@ import LoginBetweenImg from '../../assets/img/loginbar_between.svg';
 import RankingNumberImg from '../../assets/img/Ranking Number.svg';
 const Logined = () => 
 {
+    const [steamId, setSteamId] = useState('');
+    useEffect(() => {
+        const steam_id = localStorage.getItem('steam_id')
+        setSteamId(steam_id)
+    }, [])
     return (
         <div>
             <main className="content">  
