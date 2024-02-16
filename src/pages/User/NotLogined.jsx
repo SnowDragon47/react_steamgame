@@ -32,11 +32,11 @@ const NotLogined = () =>
                     <img src={LoginBanner} className="login_banner"/>
                     <table className="login_content">
                         <td>
-                            <tr>
+                            <tr className="connect_wallet_text">
                                 <text className="text46">Connect Wallet</text>
                             </tr>
-                            <tr>
-                                <text className="font_white font_work_sans">Choose a wallet you want to connect. <br/>There are several wallet providers.</text>
+                            <tr className="connect_wallet_textfield">
+                                <text className="font_white font_work_sans connect_wallet_textfield">Choose a wallet you want to connect. <br/>There are several wallet providers.</text>
                             </tr>
                             <tr>
                                 <button className="wallet_btn"><img src={MetaMaskImg} width={30}/><p className="btn_between font_work_sans">Metamask</p></button>
@@ -51,99 +51,94 @@ const NotLogined = () =>
                         </td>
                     </table>
                 </div>
-                <div className="login_user_list">
+                <div className="logined_user_list">
                     <img src={LoginBetweenImg} className="login_between_bar"/>
                     <table className="user_table">
-                        <thead className="table_header">
-                            <td>
-                                <text className="ml-4">#</text>
-                            </td>                  
-                            <td>    
-                            <text className="ml-4">Player</text>
-                            </td>
-                            <td>
-                            <text className="ml-20">
-                                    Tier
-                                </text>
-                            </td>
-                            <td>
-                            <text className="ml-8">
-                                    Server
-                                </text>
-                            </td>
-                            <td>
-                            <text className="text18  ml-8">
-                                    Points earned
-                                </text>
-                            </td>                            
-                        </thead>
                         <tbody className="table_body">
-                                <tr className="user_member_btn">
-                                    <td className="text18 ml-4">
-                                            <img src={RankingNumberImg}/>
-                                            <text className="ranking_number">1</text>
-                                    </td>
-                                    <td className="text22 ml-2">
-                                        <div className="user_no_rectangul">
-                                        <img src={ArtistAvatar} width={40}/>
-                                        <text className="userInfo font_work_sans user_name">Jaydon Ekstrom Bothman</text>
-                                        </div>
-                                    </td>
-                                    <td className="ml-24">
-                                        <text className="userInfo tier">1</text>
-                                    </td>
-                                    <td className="ml-12">
-                                        <text className="userInfo">Scrapfrontier 1</text>
-                                    </td>
-                                    <td className="ml-8">
-                                        <text className="userInfo">8000</text>
-                                    </td>
-                                </tr>
-                                <tr className="user_member_btn">
-                                    <td className="text18 ml-4">
-                                        
-                                            <img src={RankingNumberImg}/>
-                                            <text className="ranking_number">2</text>
-                                    </td>
-                                    <td className="text22 ml-2">
-                                        <div className="user_no_rectangul">
-                                        <img src={ArtistAvatar1} width={40}/>
-                                        <text className="userInfo font_work_sans user_name">Ruben Carder</text>
-                                        </div>
-                                    </td>
-                                    <td className="ml-24">
-                                        <text className="userInfo tier">1</text>
-                                    </td>
-                                    <td className="ml-12">
-                                        <text className="userInfo">Scrapfrontier 1</text>
-                                    </td>
-                                    <td className="ml-8">
-                                        <text className="userInfo">8000</text>
-                                    </td>
-                                </tr>
-                                <tr className="user_member_btn">
-                                    <td className="text18 ml-4">
-                                        
-                                            <img src={RankingNumberImg}/>
-                                            <text className="ranking_number">3</text>
-                                    </td>
-                                    <td className="text22 ml-2">
-                                        <div className="user_no_rectangul">
-                                        <img src={ArtistAvatar2} width={40}/>
-                                        <text className="userInfo font_work_sans user_name">Alfredo Septimus</text>
-                                        </div>
-                                    </td>
-                                    <td className="ml-24">
-                                        <text className="userInfo tier">1</text>
-                                    </td>
-                                    <td className="ml-12">
-                                        <text className="userInfo">Scrapfrontier 1</text>
-                                    </td>
-                                    <td className="ml-8">
-                                        <text className="userInfo">8000</text>
-                                    </td>
-                                </tr>
-                            
+                            <tr className="table_header">
+                                <td className="ml-4 rank text18">
+                                    <text>#</text>
+                                </td>                  
+                                <td className="ml-2">    
+                                    <text>Player</text>
+                                </td>
+                                <td className="ml-24 tier">
+                                    <text>Tier</text>
+                                </td>
+                                <td className="ml-12 server">
+                                <text>
+                                        Server
+                                    </text>
+                                </td>
+                                <td className="ml-8 point">
+                                    <text >Points earned
+                                    </text>
+                                </td>
+                            </tr>
+                            <tr className="user_member_btn">
+                                <td className="ml-4 rank text18">
+                                        <img src={RankingNumberImg}/>
+                                        <text className="ranking_number">1</text>
+                                </td>
+                                <td className="text22 ml-2">
+                                    <div className="user_no_rectangul">
+                                    <img src={ArtistAvatar} width={40} className="user_avatar"/>
+                                    <text className="userInfo font_work_sans user_name">Jaydon Ekstrom Bothman</text>
+                                    </div>
+                                </td>
+                                <td className="ml-24">
+                                    <text className="userInfo tier">1</text>
+                                </td>
+                                <td className="ml-12">
+                                    <text className="userInfo server">Scrapfrontier 1</text>
+                                </td>
+                                <td className="ml-8">
+                                    <text className="userInfo point">18000</text>
+                                </td>
+                            </tr>
+                            <tr className="user_member_btn">
+                                <td className="text18 ml-4 rank">
+                                    
+                                        <img src={RankingNumberImg}/>
+                                        <text className="ranking_number">2</text>
+                                </td>
+                                <td className="text22 ml-2">
+                                    <div className="user_no_rectangul">
+                                    <img src={ArtistAvatar1} width={40} className="user_avatar"/>
+                                    <text className="userInfo font_work_sans user_name">Ruben Carder</text>
+                                    </div>
+                                </td>
+                                <td className="ml-24">
+                                    <text className="userInfo tier">1</text>
+                                </td>
+                                <td className="ml-12">
+                                    <text className="userInfo server">Scrapfrontier 1</text>
+                                </td>
+                                <td className="ml-8">
+                                    <text className="userInfo point">15265</text>
+                                </td>
+                            </tr>
+                            <tr className="user_member_btn">
+                                <td className="text18 ml-4 rank">
+                                        <img src={RankingNumberImg}/>
+                                        <text className="ranking_number">3</text>
+                                </td>
+                                <td className="text22 ml-2">
+                                    <div className="user_no_rectangul">
+                                    <img src={ArtistAvatar2} width={40} className="user_avatar"/>
+                                    <text className="userInfo font_work_sans user_name">Alfredo Septimus</text>
+                                    </div>
+                                </td>
+                                <td className="ml-24">
+                                    <text className="userInfo tier">1</text>
+                                </td>
+                                <td className="ml-12">
+                                    <text className="userInfo server">Scrapfrontier 1</text>
+                                </td>
+                                <td className="ml-8">
+                                    <text className="userInfo point">15120</text>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>

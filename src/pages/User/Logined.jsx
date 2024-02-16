@@ -51,9 +51,9 @@ const Logined = () =>
                                                 </text>
                                             </tr>
                                             <tr>
-                                                <button className="wallet_number">
+                                                <div className="wallet_number">
                                                     0X....4888
-                                                </button>   
+                                                </div>   
                                             </tr>
                                             
                                         </td>
