@@ -17,13 +17,19 @@ import { useNavigate } from "react-router-dom";
 const Header = () => {
     const [isBuger, setIsBuger] = useState(false);
     const [isLogin, setLogin] = useState(false);
+    const [username, setUsername] = useState('');
+    const [avatar, setAvatar] = useState('');
 
     const navigate = useNavigate();
 
     useEffect(() => {
         const steam_id = localStorage.getItem('steam_id');
+        const steam_username = localStorage.getItem('steam_username');
+        const steam_avatar = localStorage.getItem('steam_avatar');
         if (steam_id)
             setLogin(true)
+        setUsername(steam_username)
+        setAvatar(steam_avatar)
     }, [])
 
     const bugerClick = () => {
@@ -32,18 +38,15 @@ const Header = () => {
     }
 
     const handleLoginSteam = () => {
-        console.log('dddddddddd', process.env.REACT_APP_SERVER_URL)
-        window.location.href=`${process.env.REACT_APP_SERVER_URL}auth/steam`
-        // axios.get(`${process.env.REACT_APP_SERVER_URL}auth/steam`)
-        //     .then(function (response) {
-        //         console.log(response);
-        //         setLogin(true)
-        //         // navigate('../user/login')
-
-        //     })
-        //     .catch(function (error) {
-        //         console.log(error);
-        //     });
+        if (isLogin) {
+            localStorage.removeItem('steam_id')
+            localStorage.removeItem('steam_username')
+            localStorage.removeItem('steam_avatar')
+            setLogin(false)
+            navigate('/')
+            return;
+        }
+        window.location.href = `${process.env.REACT_APP_SERVER_URL}auth/steam`
     }
 
     return (
@@ -112,14 +115,12 @@ const Header = () => {
                             <span>Login <br /> with steam</span>
                         </button>
                     ) : (
-                        <Link to='../user/logout'>
 
-                            <button class="header__btn m-btn m-btn-red" >
-                                <img src={userAvatar} className="avatar_img" />
-                                <span>IVANGAMMER</span>
-                                <img src={LogOut1} style={{ marginLeft: "10px", width: "20px" }} />
-                            </button>
-                        </Link>
+                        <button class="header__btn m-btn m-btn-red" onClick={handleLoginSteam}>
+                            <img src={avatar} className="avatar_img" />
+                            <span>{username}</span>
+                            <img src={LogOut1} style={{ marginLeft: "10px", width: "20px" }} />
+                        </button>
                     )}
                     <button class="burger m-btn m-btn-red" onClick={bugerClick}>
                         <img src={burger} alt="" />

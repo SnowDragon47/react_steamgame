@@ -9,11 +9,14 @@ import ArtistAvatar from "../../assets/img/Artist Avatar.png";
 import ArtistAvatar1 from "../../assets/img/Artist Avatar1.png";
 import ArtistAvatar2 from "../../assets/img/Artist Avatar2.png";
 import LoginBetweenImg from '../../assets/img/loginbar_between.svg';
+import {useLocation} from 'react-router-dom';
 // import LoginBetweenImg from '../../assets/img/loginbar_between.svg';
 
 import RankingNumberImg from '../../assets/img/Ranking Number.svg';
-const Logined = () => 
+const Logined = (address) => 
 {
+    const location = useLocation();
+    console.log('------address in logined----', location.state.address)
     const [steamId, setSteamId] = useState('');
     useEffect(() => {
         const steam_id = localStorage.getItem('steam_id')
@@ -52,7 +55,7 @@ const Logined = () =>
                                             </tr>
                                             <tr>
                                                 <button className="wallet_number">
-                                                    0X....4888
+                                                    0x{location.state.address.slice(2, 6)}....{location.state.address.slice(-4)}
                                                 </button>   
                                             </tr>
                                             
