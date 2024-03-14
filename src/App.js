@@ -11,6 +11,9 @@ import Header from './pages/Layout/Header.jsx';
 import Rules from './pages/Rules.jsx';
 import Logined from './pages/User/Logined.jsx';
 import NotLogined from './pages/User/NotLogined.jsx';
+import DetailTournament from './pages/DetailTournament.jsx';
+import LeaderBoard from './pages/LeaderBoard.jsx';
+
 import { initWeb3InboxClient } from "@web3inbox/react";
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { createWeb3Modal } from '@web3modal/wagmi/react'
@@ -95,6 +98,9 @@ function App() {
                 <Route path='/user/login' element={<Logined />} />
                 <Route path='/user/logined' element={<NotLogined />} />
                 <Route path='/user/profile' element={<Logined />} />
+                <Route path='/user/detailTournament' element={<DetailTournament/>}/>
+                <Route path='/user/leaderboard'element= {<LeaderBoard/>}/>
+
               </Routes>
               <Footer />
             </BrowserRouter>

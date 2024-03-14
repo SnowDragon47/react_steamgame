@@ -1,0 +1,49 @@
+/* src/Carousel.css */
+.carousel {
+    position: relative;
+    max-width: 100%;
+    z-index: 2;
+    overflow: hidden;
+  }
+.carousel__btn {
+  
+  position: relative;
+  /* top: 50%; */
+  /* transform: translateY(-50%); */
+  background-color: #CC402A;
+  color: white;
+  font-size: 2rem;
+  top:-1rem;
+  border: none;
+  padding: 0.4rem;
+  cursor: pointer;
+  z-index: 1;
+  transition: background-color 0.3s;
+  width: 1.5em;
+  
+}
+.carousel__btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.carousel__btn--prev {
+  
+}
+.carousel__btn--next {
+  
+}
+.carousel__img {
+  
+  max-width: 270px;
+  height: auto;
+  margin-top:8%;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+}
+.carousel__img:hover {
+  transform: scale(1.05);
+}
+.featured_time
+{
+  padding: 0.5em;
+  background-color: rgba(255, 255, 255, 0.05);
+}
