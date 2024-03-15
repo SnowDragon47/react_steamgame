@@ -54,6 +54,216 @@ const NotLogined = () => {
                 <div class="main__video">
                     <img src={LoginImg} alt="" />
                 </div>
+<<<<<<< HEAD
+=======
+            </main> 
+            <div className="login">  
+
+                <img src={Loginbar1} alt="" className="login_bar1"/>
+                <div className="login_container">
+
+                    <div className="artist_card">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src={LoginInfoCard} className="login_info_card"/>
+                                </td>
+                                <td>
+                                    <tr className="back_content_number">
+                                        <td>
+                                            <img src={ArtistAvatar} width={40}/>
+                                        </td>
+                                        <td>
+                                            <tr>
+                                                <text className="font_work_sans ml-2">
+                                                    Wallet
+                                                </text>
+                                            </tr>
+                                            <tr>
+                                                <div className="wallet_number">
+                                                    0X....4888
+                                                </div>   
+                                            </tr>
+                                            
+                                        </td>
+                                    </tr>
+                                    <tr className="back_content_claim">
+                                        <td>
+                                            <tr>
+                                                <text className="font_work_sans">
+                                                    Available To Claim
+                                                </text>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <text className="text10" style={{marginLeft:"-80%"}}>
+                                                        Total:
+                                                    </text>
+                                                </td>
+                                                <td>
+                                                    <text className="text14" style={{marginLeft:"-90%"}}>
+                                                        1203 SCRP
+                                                    </text>
+                                                </td>
+                                            </tr>
+                                        </td>
+                                    </tr>
+                                    <tr className="wallet_btn_red_claim">
+                                        <td>
+                                            <text className="font_work_sans ml-2">
+                                                CLAIM
+                                            </text>
+                                        </td>
+                                    </tr>
+                                    
+                                </td>
+                                <td>
+                                    <tr className="back_content_address">
+                                        <td>
+                                            <img src={ArtistAvatar1} width={40}/>
+                                        </td>
+                                        <td>
+                                            <tr>
+                                                <text className="font_work_sans ml-2">
+                                                    Wallet Address
+                                                </text>
+                                            </tr>
+                                            <tr>
+                                                <button className="wallet_address">
+                                                75651198042333132
+                                                </button>
+                                            </tr>
+                                            
+                                        </td>
+                                    </tr>
+                                    <tr className="back_content_tier">
+                                        <td>
+                                            <tr>
+                                                <text className="font_work_sans">
+                                                    Current Tier
+                                                </text>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <text className="text10" style={{marginLeft:"-50%"}}>
+                                                        Pool access:
+                                                    </text>
+                                                </td>
+                                                <td>
+                                                    <text className="text14">
+                                                        Tier 1
+                                                    </text>
+                                                </td>
+                                            </tr>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr className="wallet_btn_red_upgrade">
+                                        <td>
+                                            <text className="font_work_sans ml-2">
+                                                UPGRADE
+                                            </text>
+                                        </td>
+                                    </tr>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </div>
+                </div>
+                <div className="logined_user_list">
+                    <img src={LoginBetweenImg} className="login_between_bar"/>
+                    <table className="user_table">
+                        <tbody className="table_body">
+                            <tr className="table_header">
+                                <td className="ml-4 rank text18">
+                                    <text>#</text>
+                                </td>                  
+                                <td className="ml-2">    
+                                    <text>Player</text>
+                                </td>
+                                <td className="ml-24 tier">
+                                    <text>Tier</text>
+                                </td>
+                                <td className="ml-12 server">
+                                <text>
+                                        Server
+                                    </text>
+                                </td>
+                                <td className="ml-8 point">
+                                    <text >Points earned
+                                    </text>
+                                </td>
+                            </tr>
+                            <tr className="user_member_btn">
+                                <td className="ml-4 rank text18">
+                                        <img src={RankingNumberImg}/>
+                                        <text className="ranking_number">1</text>
+                                </td>
+                                <td className="text22 ml-2">
+                                    <div className="user_no_rectangul">
+                                    <img src={ArtistAvatar} width={40} className="user_avatar"/>
+                                    <text className="userInfo font_work_sans user_name">Jaydon Ekstrom Bothman</text>
+                                    </div>
+                                </td>
+                                <td className="ml-24">
+                                    <text className="userInfo tier">1</text>
+                                </td>
+                                <td className="ml-12">
+                                    <text className="userInfo server">Scrapfrontier 1</text>
+                                </td>
+                                <td className="ml-8">
+                                    <text className="userInfo point">18000</text>
+                                </td>
+                            </tr>
+                            <tr className="user_member_btn">
+                                <td className="text18 ml-4 rank">
+                                    
+                                        <img src={RankingNumberImg}/>
+                                        <text className="ranking_number">2</text>
+                                </td>
+                                <td className="text22 ml-2">
+                                    <div className="user_no_rectangul">
+                                    <img src={ArtistAvatar1} width={40} className="user_avatar"/>
+                                    <text className="userInfo font_work_sans user_name">Ruben Carder</text>
+                                    </div>
+                                </td>
+                                <td className="ml-24">
+                                    <text className="userInfo tier">1</text>
+                                </td>
+                                <td className="ml-12">
+                                    <text className="userInfo server">Scrapfrontier 1</text>
+                                </td>
+                                <td className="ml-8">
+                                    <text className="userInfo point">15265</text>
+                                </td>
+                            </tr>
+                            <tr className="user_member_btn">
+                                <td className="text18 ml-4 rank">
+                                        <img src={RankingNumberImg}/>
+                                        <text className="ranking_number">3</text>
+                                </td>
+                                <td className="text22 ml-2">
+                                    <div className="user_no_rectangul">
+                                    <img src={ArtistAvatar2} width={40} className="user_avatar"/>
+                                    <text className="userInfo font_work_sans user_name">Alfredo Septimus</text>
+                                    </div>
+                                </td>
+                                <td className="ml-24">
+                                    <text className="userInfo tier">1</text>
+                                </td>
+                                <td className="ml-12">
+                                    <text className="userInfo server">Scrapfrontier 1</text>
+                                </td>
+                                <td className="ml-8">
+                                    <text className="userInfo point">15120</text>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <img src={Loginbar3} alt="" className="login_bar3"/>
+
+>>>>>>> c413d69c3885a23c6aa6eb4b6dcd1a527fc284ec
             </div>
         </main>
         <div className="container" style={{zIndex:2, position:"relative"}}>
