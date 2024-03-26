@@ -25,12 +25,6 @@
 .carousel__btn:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
-.carousel__btn--prev {
-  
-}
-.carousel__btn--next {
-  
-}
 .carousel__img {
   
   max-width: 270px;
@@ -44,6 +38,38 @@
 }
 .featured_time
 {
-  padding: 0.5em;
+  /* padding: 0.5em; */
   background-color: rgba(255, 255, 255, 0.05);
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+
+.carousel__slide {
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.carousel__slide-enter {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.carousel__slide-exit {
+  opacity: 0;
+  transform: translateX(-100%); /* Slide out to the left */
 }

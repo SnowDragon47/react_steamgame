@@ -1,0 +1,49 @@
+@keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideOut {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .slide-in-animation {
+    animation: slideIn 0.5s ease-out forwards;
+  }
+  
+  .slide-out-animation {
+    animation: slideOut 0.5s ease-out forwards;
+  }
+  
+  .card-carousel-container {
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .card-container {
+    flex-shrink: 0; /* Prevents cards from shrinking */
+    width: calc(66.666% - 10px); /* For 380px viewport, will show 1.5 cards */
+    /* margin-right: 10px; */
+  }
+  
+  /* Adjustments for larger screens */
+  @media screen and (min-width: 640px) {
+    .card-container {
+      width: calc(33.333% - 10px); /* Will show 3 cards */
+    }
+  }
+  .full-width-image {
+    /* width: 100%;
+    height: auto; 
+    display: block;  */
+  }
+  

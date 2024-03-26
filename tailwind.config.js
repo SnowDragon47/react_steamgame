@@ -9,9 +9,12 @@ module.exports = {
       'bebas' : 'Bebas Neue',
     },
     screens:{
-      'ssm' : '320px',
-      'sm' : '640px',
-      'lg' : '1204px',
+      // 'xs' : '320px',
+      'sm' : '319px',
+      'md' : '880px',
+      // 'mmd' : '1024px',
+      'lg' : '1440px',
+      
     },
     extend: {},
   },

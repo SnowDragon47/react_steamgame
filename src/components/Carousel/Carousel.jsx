@@ -1,93 +1,78 @@
 import React, {useEffect, useState} from "react";
+
 import './Carousel.css';
 
-const CarouselIndicators = ({ images, activeIndex, onClick }) => {
-    return (
-      <div className="carousel__indicators">
-        {images.map((_, index) => (
-          <span
-            key={index}
-            className={`carousel__indicator ${
-              index === activeIndex ? 'active' : ''
-            }`}
-            onClick={() => onClick(index)}  
-          />
-        ))}
-      </div>
-    );
-  };
-const Carousel = ({images, tournamentTitle, interval =3000}) => {
+const Carousel = ({items, interval =5000}) => {
 
     const [activeIndex, setActiveIndex] = useState(0);
-    useEffect (()=>{
-        const autoPlayInterval = setInterval(nextSlide, interval);
+    const [slideIn, setSlideIn] = useState(true);
+
+    useEffect(() => {
+        const autoPlayInterval = setInterval(() => {
+            nextSlide(); // Directly go to the next slide
+        }, interval);
+
         return () => {
-        clearInterval(autoPlayInterval);
+            clearInterval(autoPlayInterval);
         };
+        // Removed the activeIndex dependency to prevent resetting the timer unnecessarily
     }, [interval]);
+
     const nextSlide = () => {
-        setActiveIndex((prevIndex) =>
-        prevIndex === images.length - 1 ? 0 : prevIndex + 1
-        );
+        setSlideIn(false); // Begin to slide out
+        setTimeout(() => {
+            setActiveIndex(prevIndex => (prevIndex === items.length - 1 ? 0 : prevIndex + 1));
+            setSlideIn(true); // After state is set, start sliding in
+        }, 250); // Match this timeout with your CSS transition duration
     };
-    
+
     const prevSlide = () => {
-        setActiveIndex((prevIndex) =>
-        prevIndex === 0 ? images.length - 1 : prevIndex - 1
-        );
+        setSlideIn(false); // Begin to slide out
+        setTimeout(() => {
+            setActiveIndex(prevIndex => (prevIndex === 0 ? items.length - 1 : prevIndex - 1));
+            setSlideIn(true); // After state is set, start sliding in
+        }, 250); // Match this timeout with your CSS transition duration
     };
-    const goToSlide = (index) => {
-        setActiveIndex(index);
-      };
+  
     return (
         <div className="carousel">
-            <div className="grid">
-                <span className="grid justify-items-start font-bebas text-4xl">FEATURED</span>
-                <div className="grid justify-items-end -mt-6">
-                    <div class="flex items-center">
-                        <button onClick={prevSlide} className="carousel__btn carousel__btn--prev">
-                            &lt;
-                        </button>
-                    
-                        <button onClick={nextSlide} className="ml-2 carousel__btn carousel__btn--next">
-                            &gt;
-                        </button>
-                    </div>
-                    
+            <div className="flex justify-between">
+                <span className="font-bebas text-[46px]">FEATURED</span>
+                <div class="flex items-center mt-4">
+                    <button onClick={prevSlide} className="carousel__btn carousel__btn--prev">
+                        &lt;
+                    </button>
+                    <button onClick={nextSlide} className="ml-2 carousel__btn carousel__btn--next">
+                        &gt;
+                    </button>
                 </div>
             </div>
             
-            <div className="grid lg:grid-cols-6 sm:grid-cols-6 ssm:grid-rows-4 gap-5">
-                <div className="lg:col-span-2 sm:col-span-2 ssm:row-span-2">
+            <div className={`carousel__slide ${slideIn ? 'carousel__slide-enter' : 'carousel__slide-exit'} grid lg:grid-cols-6 md:grid-cols-6 sm:grid-rows-4 gap-2`}>
+                <div className="lg:col-span-2 md:col-span-2 sm:row-span-2 items-center">
                     <img
-                    className="lg:w-[270px] sm:w-[270px] ssm:w-[320px] lg:h-[186px] sm:h-[186px] ssm:h-[220px]"
-                        src={images[activeIndex]}
+                    className="lg:w-[270px] sm:w-[320px]"
+                        src={items[activeIndex]['imgUrl']}
                         alt={`Slide ${activeIndex}`}
                     />
                 </div>
-                <div className="lg:col-span-4 sm:col-span-4 ssm:row-span-2 lg:mt-0 sm:mt-0 ssm:-mt-10">
-                    <div className="grid grid-rows-3 gap-1">
-                        <div className="text-2xl row-span-1">
-                            <span className="float-left uppercase">{tournamentTitle[activeIndex]}</span>
-                        </div>
-                        <div className="text-sm row-span-1 lg:mt-0 sm:mt-0 ssm:-mt-2">
-                            <span className="float-left text-left">
-                                Игра на выживание Rust от разработчиков Facepunch Studios получила контентное и техническое обновление. Наибольший интерес в нем представляет продолжение развития идей, связанных с железными дорогами.
-                            </span>
-                        </div>
-                        <div className="text-xl row-span-1">
-                            <span className="float-left featured_time">
-                                04.03.2024
+                <div className="lg:col-span-4 md:col-span-4 sm:row-span-2 py-2 lg:mt-0 mmd:mt-0 md:mt-0 sm:-mt-8">
+                    <div className="grid grid-rows-6">
+                        <span className="row-span-2 float-left text-[32px] uppercase break-all">
+                            {items[activeIndex]['title']}
+                        </span>
+                        <span className="row-span-2 float-left text-[16px] break-all mt-2">
+                            {items[activeIndex]['content']}
+                        </span>
+                        <div className="row-span-2">
+                            <span className=" float-left text-[18px] bg-white bg-opacity-5 p-2 my-2">
+                                {items[activeIndex]['time']}
                             </span>
                         </div>
                     </div>
+                    
                 </div>   
             </div>
-            <CarouselIndicators
-                images={images}
-                activeIndex={activeIndex}
-                onClick={goToSlide}
-            />
         </div>
     );
 }
