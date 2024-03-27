@@ -55,9 +55,9 @@ const CardCarousel = ({ items, walletAddress }) => {
                         spaceBetween: 20,
                         slidesPerView: 1.4,
                         },
-                        468:{
+                        460:{
                             spaceBetween: 20,
-                            slidesPerView: 3,
+                            slidesPerView: 2,
                         },
                         768: {
                         spaceBetween: 20,
@@ -79,10 +79,10 @@ const CardCarousel = ({ items, walletAddress }) => {
                         <SwiperSlide key={index}>
                             <div className="flex flex-col">
                                     <img  className="w-[270px] min-w-[175px]" src={item.imgUrl} alt="" />
-                                    <span className="relative bg-[#CC402A] text-white p-2  text-center lg:text-[18px] md:text-[12px] lg:text-[18px] uppercase w-[50%] -mt-[20px] lg:-mt-[40px] md:-mt-[40px] sm:-mt-[40px]">tournament</span>
+                                    <span className="relative bg-[#CC402A] text-white p-2  text-center lg:text-[18px] md:text-[12px] sm:text-[12px] lg:text-[18px] uppercase w-[50%] -mt-[20px] lg:-mt-[40px] md:-mt-[40px] sm:-mt-[40px]">tournament</span>
                                 
                                 
-                                <span className="lg:text-[26px] md:text-[26px] sm:text-[26px] uppercase mt-[22px]">tournament name</span>
+                                <span className="lg:text-[26px] md:text-[26px] sm:text-[22px] uppercase mt-[22px]">tournament name</span>
                                 <div className="flex grid-cols gap-[20px] mt-[20px]">
                                     <img src = {SettingIcon}/>
                                     <span className="text-[24px]">35</span>

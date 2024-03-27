@@ -259,7 +259,8 @@ html.fixed-body {
     max-width: 1400px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 2.5em
+    padding: 0 2.5em;
+    z-index: 2;
 }
 
 @media screen and (max-width:992px) {
