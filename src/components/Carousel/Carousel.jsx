@@ -53,7 +53,7 @@ const Carousel = ({items, interval =5000}) => {
                             return (
                             <SwiperSlide key={index}>
                                 <div className="flex lg:flex-row md:flex-row sm:flex-col">
-                                    <div className="flex justify-center text-center">
+                                    <div className="flex justify-center items-center">
                                         <img src = {item.imgUrl} alt={`Slide ${index}`} className="max-w-[320px] w-[270px] "/>
 
                                     </div>

@@ -51,23 +51,23 @@ const CardCarousel = ({ items, walletAddress }) => {
                         swiper.navigation.prevEl = navigationPrevRef.current;
                     }}
                     breakpoints={{
-                        320: {
+                        319: {
                         spaceBetween: 20,
-                        slidesPerView: 1.2,
+                        slidesPerView: 1.4,
                         },
-                        468: {
-                        spaceBetween: 20,
-                        slidesPerView: 1.8,
+                        468:{
+                            spaceBetween: 20,
+                            slidesPerView: 3,
                         },
                         768: {
                         spaceBetween: 20,
-                        slidesPerView: 2,
+                        slidesPerView: 3,
                         },
                         1024: {
                         spaceBetween: 20,
-                        slidesPerView: 2.5,
+                        slidesPerView: 3,
                         },
-                        1280: {
+                        1440: {
                         spaceBetween: 20,
                         slidesPerView: 3,
                         },
@@ -78,19 +78,18 @@ const CardCarousel = ({ items, walletAddress }) => {
                         return (
                         <SwiperSlide key={index}>
                             <div className="flex flex-col">
-                                <div className="flex grid-rows">
-                                    <img  className="min-w-[175px] w-[270px]" src={item.imgUrl} alt="" />
-                                    <span className="absolute bg-[#CC402A] text-white p-2 text-[18px] uppercase top-32">tournament</span>
-                                </div>
+                                    <img  className="w-[270px] min-w-[175px]" src={item.imgUrl} alt="" />
+                                    <span className="relative bg-[#CC402A] text-white p-2  text-center lg:text-[18px] md:text-[12px] lg:text-[18px] uppercase w-[50%] -mt-[20px] lg:-mt-[40px] md:-mt-[40px] sm:-mt-[40px]">tournament</span>
+                                
                                 
                                 <span className="lg:text-[26px] md:text-[26px] sm:text-[26px] uppercase mt-[22px]">tournament name</span>
                                 <div className="flex grid-cols gap-[20px] mt-[20px]">
                                     <img src = {SettingIcon}/>
                                     <span className="text-[24px]">35</span>
                                 </div>
-                                <div className="flex lg:grid-cols md:grid-cols sm:grid-rows gap-[20px] mt-[20px]">
-                                    <span className=" p-2 bg-[rgba(255,255,255,0.05)] text-[18px]">Wed 04/10 at 12-30 PM</span>
-                                    <span className=" p-2 bg-[rgba(255,255,255,0.05)] text-[18px]">0/300</span>
+                                <div className="flex lg:flex-row md:flex-row sm:flex-col gap-[20px] mt-[20px]">
+                                    <span className="lg:w-[72%] md:w-[72%] sm:w-[100%] p-2 bg-[rgba(255,255,255,0.05)] text-[18px]">Wed 04/10 at 12-30 PM</span>
+                                    <span className="lg:w-[25%] md:w-[25%] sm:w-[35%] p-2 bg-[rgba(255,255,255,0.05)] text-[18px]">0/300</span>
                                 </div>
                                 <button className="text-[22px] py-3 my-[20px] uppercase" style={{backgroundColor:!walletAddress ? "#858585": "#CC402A"}} >join</button>
                             </div>

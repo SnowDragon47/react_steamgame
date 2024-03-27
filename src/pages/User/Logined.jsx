@@ -111,7 +111,7 @@ const NotLogined = () => {
                 </div>
             </div>
         </main>
-        <div className="main_container z-10 relative" >
+        <div className="main_container z-2 relative" >
             <div className="flex lg:flex-row md:flex-row sm:flex-col-reverse justify-center -my-[15%]">
                 <div className="lg:w-[70.45%] md:w-[70.45%] sm:w-[100%]">
                   <img src={ContentHeader} className="featured_header"/>
@@ -167,7 +167,7 @@ const NotLogined = () => {
                       </button>
                     }
                     <img src={Divider}/>
-                    <span className="flex justify-center items-center text-[26px] m-[20px]">My current season Pass</span>
+                    <span className="flex justify-center items-center text-center text-[26px] m-[20px]">My current season Pass</span>
                     <div className="flex justify-center items-center text-[22px] uppercase p-2 mx-[20px]" style={{backgroundColor:"rgba(255, 255, 255, 0.05)"}}>{address? "tier1" : "n/a" }</div>
                     <div className="flex justify-center items-center my-[4px]">
                       <img src={address? SteamCardOpen : SteamCard}/>
@@ -186,7 +186,7 @@ const NotLogined = () => {
                       </div>
                     }
                     <img src={Divider}/>
-                    <span className="flex justify-center items-center text-[26px] uppercase m-[20px]">scarp available</span>
+                    <span className="flex justify-center items-center text-center text-[26px] uppercase m-[20px]">scarp available</span>
                     <div className="flex justify-center items-center text-[22px] uppercase p-2 mx-[20px]" style={{backgroundColor:"rgba(255, 255, 255, 0.05)"}}>{address? "45200" : "n/a" }</div>
                     <div className="flex justify-center items-center text-[22px] p-4 mx-[20px] mb-[40px] mt-[20px] uppercase" style={ address? {backgroundColor:"#CC402A"}
                  :{backgroundColor:"#858585"}}>
