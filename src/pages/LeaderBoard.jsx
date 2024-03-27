@@ -9,7 +9,7 @@ const LeaderBoard = () => {
         <div>
             <main className="content">
                 <div class="main main2">
-                    <div class="container">
+                    <div class="main_container">
                         <div class="main__content">
                             <h1 class="text-center text120">
                             leaderboard
@@ -21,7 +21,7 @@ const LeaderBoard = () => {
                     </div>
                 </div>
             </main>
-            <div className="container">
+            <div className="main_container">
                 <div className="mt-24">
                     <img src={ContentHeader}/>
                     <div style = {{backgroundColor:"rgba(255,255,255,0.05)", backdropFilter:"blur(10px)"}}>

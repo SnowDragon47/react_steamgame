@@ -5,7 +5,7 @@ const Stat = () => {
 
     return(
         <div class="stat">
-            <div class="container">
+            <div class="main_container">
                 <div class="stat__items">
                     <div class="stat-item">
                         <img src={StatIcon} alt="" class="stat-item__icon"/>

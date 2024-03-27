@@ -4,7 +4,7 @@ const Faq = () => {
     return (
 
         <div class="faq">
-            <div class="container">
+            <div class="main_container">
                 <div class="faq__items">
                     <Spoiler
                     title={"Can I make money from my video/stream?"}

@@ -83,7 +83,7 @@ const Header = () => {
     return (
         <header className={isBuger ? "header _open" : "header"}>
             {/* <header className="header"> */}
-            <div className="container">
+            <div className="main_container">
                 <div className="header__inner">
                     <a href="/" className="header__logo">
                         <img src={logo} alt='' />

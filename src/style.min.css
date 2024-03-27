@@ -255,7 +255,7 @@ html.fixed-body {
     padding-right: var(--scrollWidth)
 }
 
-.container {
+.main_container {
     max-width: 1400px;
     width: 100%;
     margin: 0 auto;
@@ -266,7 +266,7 @@ html.fixed-body {
     .m-page {
         font-size: calc(100vw * (16 / 768))
     }
-    .container {
+    .main_container {
         padding: 0 .9375em
     }
     
@@ -1129,6 +1129,7 @@ body{
 }
 
 .footer {
+    margin-top: 180px;
     padding: 5em 0 2.5em;
     overflow: hidden
 }

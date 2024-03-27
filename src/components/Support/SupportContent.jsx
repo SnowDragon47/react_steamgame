@@ -4,7 +4,7 @@ import Close2 from "../../assets/img/close2.svg";
 
 const SupportContent = () => {
     return(
-            <div class="container">
+            <div class="main_container">
                 <div class="support__grid">
                     <div class="support__col">
                         <h2 class="text80">

@@ -21,6 +21,9 @@ import { useWeb3Modal } from "@web3modal/wagmi/react";
 import { useNavigate } from "react-router-dom";
 import Carousel from "../../components/Carousel/Carousel";
 import CardCarousel from "../../components/CardCarousel/CardCarousel";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+
 
 // import MySwiper from "../../components/Swiper/MySwiper";
 const NotLogined = () => {
@@ -34,7 +37,6 @@ const NotLogined = () => {
       }
       open();
     }
-
     useEffect(() => {
         console.log("------------ address -------------", address)
         if (address) {
@@ -44,18 +46,21 @@ const NotLogined = () => {
 
     const feturedItems=[
       {
+        id: 0,
         imgUrl : TournamentImg1,
         title : "First slide Симулятор выживания Rust получил обновление",
         content : "Игра на выживание Rust от разработчиков Facepunch Studios получила контентное и техническое обновление. Наибольший интерес в нем представляет продолжение развития идей, связанных с железными дорогами.",
         time : "04.03.2024"
       },
       {
+        id: 1,
         imgUrl : TournamentImg1,
         title : "2th Slide Симулятор выживания Rust получил обновление",
         content : "Игра на выживание Rust от разработчиков Facepunch Studios получила контентное и техническое обновление. Наибольший интерес в нем представляет продолжение развития идей, связанных с железными дорогами.",
         time : "04.03.2024"
       },
       {
+        id: 2,
         imgUrl : TournamentImg1,
         title : "3rd slide Симулятор выживания Rust получил обновление",
         content : "Игра на выживание Rust от разработчиков Facepunch Studios получила контентное и техническое обновление. Наибольший интерес в нем представляет продолжение развития идей, связанных с железными дорогами.",
@@ -65,6 +70,7 @@ const NotLogined = () => {
 
     const CardCarsouelItems = [
       {
+        id: '0',
         imgUrl : TournamentImg1,
         title : "tournament name",
         amount : 35,
@@ -72,6 +78,7 @@ const NotLogined = () => {
         remainAmount : "0/300", 
       },
       {
+        id: '1',
         imgUrl : TournamentImg1,
         title : "tournament name",
         amount : 35,
@@ -79,6 +86,7 @@ const NotLogined = () => {
         remainAmount : "0/300", 
       },
       {
+        id: '2',
         imgUrl : TournamentImg1,
         title : "tournament name",
         amount : 35,
@@ -86,6 +94,7 @@ const NotLogined = () => {
         remainAmount : "0/300", 
       },
       {
+        id: '3',
         imgUrl : TournamentImg1,
         title : "tournament name",
         amount : 35,
@@ -102,155 +111,91 @@ const NotLogined = () => {
                 </div>
             </div>
         </main>
-        <div className="container" style={{zIndex:2, position:"relative"}}>
-          <div className="grid lg:grid-cols-11 md:grid-cols-11 sm:grid-rows-12 -my-[15%] lg:h-[1200px] md:h-[1200px] sm:h-[2400px] gap-[20px]">
-            <div className="lg:col-span-8 md:col-span-8 sm:row-span-4 lg:mt-0 md:mt-0 sm:mt-[1100px]">
-              <img src={ContentHeader} alt="" className="featured_header object-fill" />
-              <div className="grid grid-rows-12 lg:h-[876px] md:h-[876px] sm:h-[1114px]" style={{backgroundColor:"rgba(255, 255, 255, 0.1)", backdropFilter:"blur(10px)"}}>
-                <div className="lg:row-span-4  sm:row-span-6 lg:p-[40px] md:p-[20px] sm:p-[20px]">
-                    {/* <Carousel items = {feturedItems} /> */}
-                    {/* <MySwiper  images={CarouselImg1}/> */}
+        <div className="main_container z-10 relative" >
+            <div className="flex lg:flex-row md:flex-row sm:flex-col-reverse justify-center -my-[15%]">
+                <div className="lg:w-[70.45%] md:w-[70.45%] sm:w-[100%]">
+                  <img src={ContentHeader} className="featured_header"/>
+                  <div  className="flex flex-col" style={{backgroundColor:"rgba(255, 255, 255, 0.1)", backdropFilter:"blur(10px)"}}>
+                    <div className="lg:m-[40px] md:m-[40px] sm:m-[20px]">
+                      <Carousel items = {feturedItems}/>
+                    </div>
+                    <img src={Divider} className=""/>
+                    <div className="lg:m-[40px] md:m-[40px] sm:m-[20px]">
+                      <CardCarousel items = {CardCarsouelItems} walletAddress= {address}/>
+                    </div>
+                  </div>
+                  <img src={ContentFooter}/>
+                
                 </div>
-                <div className="lg:row-span-1 sm:row-span-1 lg:mt-10 sm:mt-0"> 
-                  <img src={Divider}/>
-                </div>
-                <div className="lg:row-span-7 sm:row-span-5 lg:p-[40px] md:p-[20px] sm:p-[20px] lg:-mt-5 md:-mt-5 sm:-mt-12 w-[100%]">
-                    {/* <CardCarousel items = {CardCarsouelItems} walletAddress= {address}/> */}
-                </div>
-              </div>
-              <img src={ContentFooter} alt="" className="featured_footer object-fill" />
-            </div>
-            <div className="lg:col-span-3 md:col-span-3 sm:row-span-5 lg:mt-0 md:mt-0 sm:-mt-[800px]">
-
-              <img src={ContentHeader} alt="" className="featured_header"/>
-              <div className="grid gird-rows-12 pb-10 h-[1050px]" style={{backgroundColor:"rgba(255, 255, 255, 0.1)", backdropFilter:"blur(10px)"}}>
-                <div className="row-span-1 mx-5 mt-10 h-[100px]">
-                  {/* <div className="float-left flex justify-between gap-[10px] p-4" style={{backgroundColor:"rgba(255, 255, 255, 0.05)"}}>
-                    <img className="" src={GeneralAvatar}/>
-                    <div className="grid grid-rows-2">
-                      <div className="row-span-1 text-2xl">
-                        STRAMNAME
+                <div className="lg:w-[27.27%] md:w-[27.27%] sm:w-[100%] lg:ml-[30px] md:ml-[30px] sm:ml-0">
+                  <img src={ContentHeader} alt="" className="featured_header"/>
+                  <div className="flex flex-col" style={{backgroundColor:"rgba(255, 255, 255, 0.1)", backdropFilter:"blur(10px)"}}>
+                    <div className="flex flex-row p-4 mx-[20px] mt-[40px] mb-[20px]" style={{backgroundColor:"rgba(255, 255, 255, 0.05)"}}>
+                      <div className="w-[25%]">
+                        <img className="w-[60px] h-[60px]" src={GeneralAvatar}/>
                       </div>
-                      <div className="row-span-1  text-xl uppercase">
-                        {
-                          address? localStorage.getItem('steam_id') : "N/A"
-                        }
+                      <div className="w-[75%]">
+                          <div className="flex flex-col py-2 space-y-2 px-2">
+                            <span className="text-[22px] uppercase">steamname</span>
+                            <span className="text-[16px] uppercase">{address? localStorage.getItem('steam_id') : "N/A"}</span>
+                          </div>
                       </div>
                     </div>
-                  </div> */}
-                  <div className="grid grid-cols-4 p-4 gap-4" style={{backgroundColor:"rgba(255, 255, 255, 0.05)"}}> 
-                    <div className="col-span-1">
-                      <img className="w-[60px] h-[60px]" src={GeneralAvatar}/>
-                    </div>
-                    <div className="col-span-3 py-2 space-y-2">
-                        <div className="text-[22px]">
-                          STRAMNAME
+                    <div className="flex grid-cols gap-[20px] mx-[20px]" >
+                      <div className= "w-[100%]" style={{backgroundColor:"rgba(255, 255, 255, 0.05)"}}>
+                        <div className="flex flex-col py-2 space-y-2 px-4">
+                          <span className="text-[16px] text-[#858584]">Points</span>
+                          <span className="text-[22px]">1203</span>
                         </div>
-                        <div className="text-[16px] uppercase">
-                          {
-                            address? localStorage.getItem('steam_id') : "N/A"
-                          }
+                      </div>
+                      <div className= "w-[100%]" style={{backgroundColor:"rgba(255, 255, 255, 0.05)"}}>
+                        <div className="flex flex-col py-2 space-y-2 px-4">
+                          <span className="text-[16px] text-[#858584]">Rank</span>
+                          <span className="text-[22px]">6</span>
                         </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                <div className="row-span-2 mx-5">
-                  <div className="grid grid-cols-12 gap-4" >
-                    <div className="col-span-6" style={{backgroundColor:"rgba(255, 255, 255, 0.05)"}}>
-                        <div className="p-4 space-y-2 h-[74px]">
-                          <div className="text-[16px]" style ={{color:"#858584"}}>
-                             Points
-                          </div>
-                          <div className="text-[22px]">
-                             1203
-                          </div>
-                        </div>
-                    </div>
-                    <div className="col-span-6" style={{backgroundColor:"rgba(255, 255, 255, 0.05)"}}>
-                        <div className="p-4 space-y-2 h-[74px]">
-                          <div className="text-[16px]" style ={{color:"#858584"}}>
-                             Rank
-                          </div>
-                          <div className="text-[22px]">
-                             6
-                          </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                {address? 
-                  <div className="row-span-1 flex justify-center items-center text-[18px] p-2 mx-5 h-[32px]" style={{border:"1px solid #CC402A"}}>
-                      <button className="uppercase flex gap-5" onClick={onhandleMetaMask}>
-                        <img src={Logout}/>
-                        <span>disconnect wallet</span>
+                    {
+                      address ?
+                      <button className="flex justify-center items-center text-[18px] border border-solid border-[#CC402A] uppercase  py-2 m-[20px] gap-2" onClick={onhandleMetaMask}>
+                          <img src={Logout}/>
+                          <span>disconnect wallet</span>
+                      </button> :
+                      <button className="flex justify-center items-center text-[18px] bg-[#CC402A] uppercase py-2 m-[20px] gap-2" onClick={onhandleMetaMask}>
+                          <img src={Logout}/>
+                          <span>connect wallet</span>
                       </button>
-                    
-                  </div>
-                  :
-                  <div className="row-span-1 flex justify-center items-center text-[18px] p-2 mx-5 h-[32px]" style={{backgroundColor:"#CC402A"}}>
-                      <button className="uppercase flex gap-5" onClick={onhandleMetaMask}>
-                        <img src={Logout}/>
-                        <span>CONNECT WALLET</span>
-                      </button>
-                  </div>
-                }
-                
-                <div className="row-span-2 py-5">
-                  <img src={Divider}/>
-                </div>
-                <div className="row-span-2 text-center text-[26px] ">
-                  <span>
-                    My current season Pass
-                  </span>
-                </div>
-                <div className="row-span-1 text-center text-[22px] p-3 mx-5 uppercase h-[42px]" style={{backgroundColor:"rgba(255, 255, 255, 0.05)"}}>
-                {
-                  address?
-                  <span className="">tier1</span>
-                  :
-                  <span className="">N/A</span>
-                }
-                </div>
-                
-                <div className="row-span-1 flex justify-center items-center px-20">
-                  {address?
-                    <img className = "" src={SteamCardOpen}/> :<img className = "" src={SteamCard}/>
-                  }
-                </div>
-                <div className="row-span-1 mx-5 mt-2 text-center text-[22px] p-4 h-[56px]" style={ address? {backgroundColor:"#CC402A"}
+                    }
+                    <img src={Divider}/>
+                    <span className="flex justify-center items-center text-[26px] m-[20px]">My current season Pass</span>
+                    <div className="flex justify-center items-center text-[22px] uppercase p-2 mx-[20px]" style={{backgroundColor:"rgba(255, 255, 255, 0.05)"}}>{address? "tier1" : "n/a" }</div>
+                    <div className="flex justify-center items-center my-[4px]">
+                      <img src={address? SteamCardOpen : SteamCard}/>
+                    </div>
+                    <div className="flex justify-center items-center text-[22px] p-4 mx-[20px] uppercase" style={ address? {backgroundColor:"#CC402A"}
                  :{backgroundColor:"#858585"}}>
-                  <button>UPGRADE</button>
-                </div>
-                {
-                  address?
-                  <div className="row-span-1 flex justify-center mx-36">
-                    <img src = {SettingIcon} className= "w-[20px] h-[20px]"/>
-                    <sapn className= "ml-2 text-[22px]">120</sapn>
+                        <span>upgrade</span>
+                    </div>
+                    {
+                      address?
+                      <div className="flex justify-center items-center m-[20px]">
+                        <img src={SettingIcon} className="w-[20px]"/> 
+                        <span className="uppercase text-[22px] ml-2 ">120</span>
+                      </div>:
+                      <div>
+                      </div>
+                    }
+                    <img src={Divider}/>
+                    <span className="flex justify-center items-center text-[26px] uppercase m-[20px]">scarp available</span>
+                    <div className="flex justify-center items-center text-[22px] uppercase p-2 mx-[20px]" style={{backgroundColor:"rgba(255, 255, 255, 0.05)"}}>{address? "45200" : "n/a" }</div>
+                    <div className="flex justify-center items-center text-[22px] p-4 mx-[20px] mb-[40px] mt-[20px] uppercase" style={ address? {backgroundColor:"#CC402A"}
+                 :{backgroundColor:"#858585"}}>
+                        <span>claim</span>
+                    </div>
                   </div>
-                  :
-                  <div></div>
-                }
-                <div className="row-span-2 py-5">
-                  <img src={Divider}/>
+                  <img src={ContentFooter} className=""/>
                 </div>
-                <div className="row-span-1 text-center text-[26px]">
-                  SCRAP AVAILABLE
-                </div>
-                <div className="row-span-1 text-center text-[22px] p-2 mx-5 h-[42px]" style={{backgroundColor:"rgba(255, 255, 255, 0.05)"}}>
-                  {
-                    address?
-                    <span className="">45200</span>
-                    :
-                    <span className="">N/A</span>
-                  }
-                </div>
-                <div className="row-span-1 mx-5 text-center text-[22px] p-4 h-[56px]" style={address? {backgroundColor:"#CC402A"}:{backgroundColor:"#858585"}}>
-                  <button>CLAIM</button>
-                </div>
-              </div>
-              <img src={ContentFooter} alt="" className="featured_footer"/>
             </div>
-          </div>
         </div>
       </div>
     );

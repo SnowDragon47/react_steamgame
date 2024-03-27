@@ -8,7 +8,7 @@ const Footer = () => {
 
     return (
         <footer class="footer">
-            <div class="container">
+            <div class="main_container">
                 <div class="footer__inner">
                     <div class="socials">
                         <a href="/" class="socials__item">

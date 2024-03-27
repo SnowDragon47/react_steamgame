@@ -40,7 +40,6 @@ const Carousel = ({items, interval =5000}) => {
                         <button onClick={prevSlide} className="carousel__btn carousel__btn--prev">
                             &lt;
                         </button>
-                    
                         <button onClick={nextSlide} className="ml-2 carousel__btn carousel__btn--next">
                             &gt;
                         </button>

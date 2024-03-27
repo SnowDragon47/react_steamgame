@@ -10,7 +10,7 @@ const LetPlay = () => {
             <img class="let-play__bg _view1" src={Bg} alt=""/>
             <img class="let-play__bg _view2" src={Bg2} alt=""/>
             <div class="let-play__wrap">
-                <div class="container">
+                <div class="main_container">
                     <div class="let-play__inner">
                         <div class="let-play__img">
                             <img src={Play} alt=""/>

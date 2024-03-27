@@ -23,7 +23,7 @@ const Banner = () => {
     //   }, [props.button]);
     return(
         <div className="main">
-            <div class="container">
+            <div class="main_container">
                 <div class="main__content">
                     <h1 class="h1">
                         Same Game,

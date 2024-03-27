@@ -9,7 +9,7 @@ const DetailTournament = (cardId) => {
         <div>
             <main className="content">
                 <div class="main main2">
-                <div class="container">
+                <div class="main_container">
                     <div class="main__content">
                             <h1 class="text120">
                                 tournament name
@@ -23,7 +23,7 @@ const DetailTournament = (cardId) => {
                     </div>
                 </div>
             </main>
-            <div className="container"> 
+            <div className="main_container"> 
                 <div className="grid grid-rows-4 lg:mt-24 sm:mt-24 ssm:mt-12">
                     <div className="row-span-2">
                         <div className="grid lg:grid-cols-4 ">

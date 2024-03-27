@@ -5,7 +5,7 @@ const Support = () =>{
     return(
             <main className="content">
                 <div class="main main2">
-                    <div class="container">
+                    <div class="main_container">
                         <div class="main__content">
                             <h1 class="text120">
                                 Support

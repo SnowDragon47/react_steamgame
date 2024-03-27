@@ -13,7 +13,7 @@
   background-color: #CC402A;
   color: white;
   font-size: 2rem;
-  top:-1rem;
+  /* top:-1rem; */
   border: none;
   padding: 0.4rem;
   cursor: pointer;
@@ -61,7 +61,7 @@
 
 
 .carousel__slide {
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 .carousel__slide-enter {
